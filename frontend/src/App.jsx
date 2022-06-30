@@ -1,11 +1,12 @@
 import Header from "@components/Header/Header"
+import Navigation from "@components/Navigation";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navigation />
     </div>
   );
 }
