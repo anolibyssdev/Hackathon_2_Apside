@@ -5,29 +5,29 @@ const Form = () => {
   return (
     <div className="form">
       <h1>Contactez-nous</h1>
-      <p className="p">
+      <p className="centerP">
         Un problème, une question, envie de nous envoyer un message d’amour ?
         N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !
       </p>
       <form action="localhoste:3000" method="post">
-        <p>Quelle est votre nom ?</p>
-        <label For="nom">
-          <input type="text" id="nom" />
+        <p className="Pstart">Quelle est votre nom ?</p>
+        <label for="nom">
+          <input type="text" id="nom" name="nom" />
         </label>
-        <p>Quelle est votre prenom ?</p>
-        <label For="prenom">
+        <p className="Pstart">Quelle est votre prenom ?</p>
+        <label for="prenom">
           <input type="text" id="prenom" />
         </label>
-        <p>Quelle est votre mail ?</p>
-        <label For="mail">
+        <p className="Pstart">Quelle est votre mail ?</p>
+        <label for="mail">
           <input type="text" id="mail" />
         </label>
-        <p>Quelle est l'object de votre message ?</p>
-        <label For="object">
+        <p className="Pstart">Quelle est l'object de votre message ?</p>
+        <label for="object">
           <input type="text" id="object" />
         </label>
-        <p>Quelle est votre message ?</p>
-        <label For="message">
+        <p className="centerP">Quelle est votre message ?</p>
+        <label for="message">
           <input className="message" type="text" id="message" />
         </label>
         <br />

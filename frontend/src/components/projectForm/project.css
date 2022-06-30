@@ -1,4 +1,4 @@
-.formBody{
+.formBody {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,12 +7,13 @@
     height: 100%;
     margin-left: 10%;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 80%;
     height: auto;
     padding: 10px;
     background-color: #183650;
@@ -21,22 +22,33 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.form form{
+    width: 100%;;
+}
+
 .centerP{
     text-align: center;
-    padding: 5px;
+    padding: 0%;
+    margin: 0%;
     margin-left: 0;
-    margin-right: 0;
 }
-.envoyer{
+
+.Pstart{
+    margin-left: 75px;
+    text-align: start;
+}
+
+.envoyer {
+    margin-top: 75px;
     margin: 10px;
-}
-.message{
-    height: 150px;
-    width: 400px;
-}
-.p{
+    width: 20%;
+  }
+  .p {
     width: 80%;
-}
-input{
-    border-radius: 4px;
-}
+    margin-left: 50px;
+  }
+  input {
+    border-radius: 5px;
+    width: 90%;
+    height: 25px;
+  }
