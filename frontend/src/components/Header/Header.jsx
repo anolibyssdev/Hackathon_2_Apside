@@ -22,12 +22,20 @@ const Header = () => {
       </div>
       <div className="links">
         <ul className="linksT">
-          <li>Accueil</li>
-          <li>Projets</li>
-          <li>Contact</li>
+          <li>
+            <a href="/">Acceuil</a>
+          </li>
+          <li>
+            <a href="/project">Project</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
         </ul>
         <ul className="linkB">
-          <li>Login/Register</li>
+          <li>
+            <a href="/login">Login/Register</a>
+          </li>
         </ul>
       </div>
     </div>

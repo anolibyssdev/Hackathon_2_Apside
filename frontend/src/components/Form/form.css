@@ -1,0 +1,36 @@
+.formBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-left: 10%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    background-color: #183650;
+    color: white;
+    border: solid 2px #e89759;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.envoyer{
+    margin: 10px;
+}
+.message{
+    height: 150px;
+    width: 400px;
+}
+.p{
+    width: 80%;
+}
+input{
+    border-radius: 5px;
+}
