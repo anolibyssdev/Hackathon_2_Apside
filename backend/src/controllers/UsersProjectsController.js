@@ -1,8 +1,8 @@
 const models = require("../models");
 
-class ProjectsController {
+class UsersProjectsController {
   static browse = (req, res) => {
-    models.projects
+    models.usersProjectsController
       .findAll()
       .then(([rows]) => {
         res.send(rows);
@@ -14,7 +14,7 @@ class ProjectsController {
   };
 
   static read = (req, res) => {
-    models.projects
+    models.usersProjects
       .find(req.params.id)
       .then(([rows]) => {
         if (rows[0] == null) {
@@ -30,14 +30,19 @@ class ProjectsController {
   };
 
   static edit = (req, res) => {
-    const projects = req.body;
-    projects.id = parseInt(req.params.id, 10);
+    const usersProjects = req.body;
 
-    models.projects
-      .update(projects)
+    usersProjects.id = parseInt(req.params.id, 10);
+    models.usersProjects
+      .update(usersProjects)
       .then(([result]) => {
-        res.status(201).send({ ...projects, id: result.insertId });
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
       })
+
       .catch((err) => {
         console.error(err);
         res.sendStatus(500);
@@ -45,11 +50,12 @@ class ProjectsController {
   };
 
   static add = (req, res) => {
-    const projects = req.body;
-    models.projects
-      .insert(projects)
+    const usersProjects = req.body;
+
+    models.usersProjects
+      .insert(usersProjects)
       .then(([result]) => {
-        res.status(201).send({ ...projects, id: result.insertId });
+        res.status(201).send({ ...usersProjects, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);
@@ -58,7 +64,7 @@ class ProjectsController {
   };
 
   static delete = (req, res) => {
-    models.projects
+    models.usersProjects
       .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);
@@ -70,4 +76,4 @@ class ProjectsController {
   };
 }
 
-module.exports = ProjectsController;
+module.exports = UsersProjectsController;
